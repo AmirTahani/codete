@@ -1,0 +1,9 @@
+version: "3"
+services:
+  node:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    command: bash -c "cd /app && npm install && npm run start"
